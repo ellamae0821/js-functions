@@ -278,16 +278,12 @@ console.log(multiplyThenDivide(bango3, bango4, bango5));
  *  This function `returns` back a string which represents someone's full name. Invoke this function by passing in your first  and last name into the function. Store the return value into a variable named `myFullName` and console.log this variable to show your result.
 */
 
-var myFirstName = "Ella";
-var myLastName = "Arana";
-
-
-
 function createFullName(firstName, lastName){
 	return firstName + " " + lastName;
 }
 
-console.log(createFullName(myFirstName, myLastName));
+var myFullName = createFullName("Ella", "Arana");
+console.log(myFullName);
 /*
  * #13 
  * Function - eatFood
@@ -301,11 +297,11 @@ console.log(createFullName(myFirstName, myLastName));
  * This function will use the previous `createFullName` function above to create a message. For example, if you invoked the function like this: eatFood("Biggie", "Smalls", "Won Ton Soup"); it will display the message "Biggie Smalls eats Won Ton Soup everyday for breakfast."
  * Console.log your result.
  */
-/**
+
 function eatFood(firstName, lastName, food){
-	return createFullName + " " + "eats" + " " + food + "everyday for breakfast.";
+	return firstName + lastName + " " + "eats" + " " + food + "everyday for breakfast.";
 }
-console.log(eatFood());**/
+console.log(eatFood("Ella ", "Arana", "mami "));
 
 /************** ENGAGE HYPERDRIVE **************/
 /* No more training wheels! For the exercises #14-18, use the experience you've
@@ -377,7 +373,7 @@ function verifyDrinkingAge(age){
     return false;
 }
 }
-var canDrink = verifyDrinkingAge(17);
+var canDrink = verifyDrinkingAge(21);
 console.log(canDrink);
 
 /**
@@ -393,5 +389,8 @@ function throwParty(){
 		return "Meh, see you at Starbucks.";
 	}
 }
+var canParty = throwParty();
+console.log(canParty);
 
-console.log(throwParty()); 
+
+
